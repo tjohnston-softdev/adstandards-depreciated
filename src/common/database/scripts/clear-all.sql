@@ -1,0 +1,11 @@
+USE adstandardsArchive;
+
+DELETE FROM CaseFile;
+DELETE FROM MediaType;
+DELETE FROM ProductCategory;
+DELETE FROM Advertiser;
+
+ALTER TABLE CaseFile AUTO_INCREMENT = 1;
+ALTER TABLE MediaType AUTO_INCREMENT = 1;
+ALTER TABLE ProductCategory AUTO_INCREMENT = 1;
+ALTER TABLE Advertiser AUTO_INCREMENT = 1;

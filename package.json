@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "archive.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tyrone Johnston",
+  "license": "SEE LICENSE IN license.txt",
+  "dependencies": {
+    "async": "^3.2.0",
+    "axios": "^0.21.0",
+    "cheerio": "^1.0.0-rc.3",
+    "clear": "^0.1.0",
+    "cli-progress": "^3.8.2",
+    "commander": "^6.2.0",
+    "fs-extra": "^9.0.1",
+    "glob": "^7.1.6",
+    "line-by-line": "^0.1.6",
+    "mysql": "^2.18.1",
+    "ora": "^5.1.0",
+    "papaparse": "^5.3.0",
+    "validator": "^13.1.17"
+  }
+}
