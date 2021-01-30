@@ -18,7 +18,7 @@ To quote their website:
 Adstandards, being the self-regulating agency for advertisement content in Australia, enables members of the general public to submit complaints regarding advertisements that can be considered offensive in some way. These complaints are then reviewed by a community panel to assess whether they are justified based on prevailing community values. Reports of these complaints and their outcomes are then [published](https://adstandards.com.au/cases) on their website for public viewing.
 
 ### Inspiration
-After I had finished [maze-graph-pathfinding](https://gitlab.com/tjohnston_softdev_personal/maze-graph-pathfinding), I wanted to write a piece of software to help me learn more about web scraping.
+After I had finished [maze-graph-pathfinding](https://github.com/tjohnston-softdev/maze-graph-pathfinding), I wanted to write a piece of software to help me learn more about web scraping.
 
 ### Getting Started
 After downloading a local copy of the project, open a terminal inside the root folder and run `npm install`. Afterwards, run `node archive` to confirm that the program has been installed and to see a list of supported commands.

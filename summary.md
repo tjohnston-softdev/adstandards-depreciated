@@ -4,7 +4,7 @@
 
 **Date:** 2021-01-30
 
-**Title:** GitHub Migration
+**Title:** Maze Graph Pathfinding link
 
 **Description:**
-Migrated from GitLab to GitHub
+Corrected link to 'maze-graph-pathfinding'
