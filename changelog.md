@@ -1,3 +1,3 @@
 # Changelog
 
-* Initial commit
+* Migrated from GitLab to GitHub
