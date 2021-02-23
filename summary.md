@@ -2,9 +2,11 @@
 
 **Version:** archive-1.0.0
 
-**Date:** 2021-01-30
+**Date:** 2021-02-24
 
-**Title:** Maze Graph Pathfinding link
+**Title:** License Definition Update
 
 **Description:**
-Corrected link to 'maze-graph-pathfinding'
+
+The 'license' property in [package.json](./package.json) now specifically refers to the CC-BY-NC-SA-4.0 license
+rather than simply referring to the text file.

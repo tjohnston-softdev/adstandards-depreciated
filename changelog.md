@@ -1,3 +1,4 @@
 # Changelog
 
-* Corrected link to [maze-graph-pathfinding](https://github.com/tjohnston-softdev/maze-graph-pathfinding) repository in readme.md
+**./package.json**
+* Updated 'license' property to acknowledge the CC-BY-NC-SA-4.0 license directly instead of referring to the text file.
