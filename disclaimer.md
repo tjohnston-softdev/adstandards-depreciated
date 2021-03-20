@@ -2,7 +2,7 @@
 
 This project is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. In summary, you are allowed to use this project as you see fit under the following conditions:
 
-* Appropriate credit to [@tjohnston_softdev](https://gitlab.com/tjohnston_softdev) is given and maintained.
+* Appropriate credit to [@tjohnston_softdev](https://github.com/tjohnston-softdev) is given.
 * The work is non-commercial. This particular license was chosen based on that clause. See below for further explanation.
 * Any derived work must exist under the same license.
 
@@ -18,5 +18,5 @@ In accordance with these terms, any use of this software and downloading of Adst
 
 **Terms Retrieved:** 11 January 2021
 
-**Last Updated:** 11 January 2021
+**Last Updated:** 20 March 2021
 

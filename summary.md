@@ -1,12 +1,11 @@
 # Summary
 
-**Version:** archive-1.0.0
+**Version:** 1.0.0
 
-**Date:** 2021-02-24
+**Date:** 2021-03-20
 
-**Title:** License Definition Update
+**Title:** GitHub Link
 
 **Description:**
 
-The 'license' property in [package.json](./package.json) now specifically refers to the CC-BY-NC-SA-4.0 license
-rather than simply referring to the text file.
+Replaced old GitLab link with GitHub link in the [disclaimer](./disclaimer.md) file.
