@@ -1,12 +1,19 @@
 // These functions help with link preperation
 
 const baseURL = "https://adstandards.com.au/cases";
+const exampleReportURL = "https://adstandards.com.au/sites/default/files/reports/0048-21.pdf";
 
 
 // Landing page.
 function getLandingPageURL()
 {
 	return baseURL;
+}
+
+
+function getExampleReportURL()
+{
+	return exampleReportURL;
 }
 
 
@@ -37,6 +44,7 @@ function combineLinkParts(pthObj)
 module.exports =
 {
 	getLandingPage: getLandingPageURL,
+	getExampleReport: getExampleReportURL,
 	createPath: createPathObject,
 	addPageNumber: addPageNumberProperty,
 	combineParts: combineLinkParts

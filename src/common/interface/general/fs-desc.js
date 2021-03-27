@@ -9,6 +9,8 @@ const reportFolderDesc = "Case Report";
 const searchPageFileDesc = "Search Page File";
 const reportFileDesc = "Case Report File";
 const outputFileDesc = "Output File";
+const exampleHtmlFileDesc = "Example HTML File";
+const exampleReportFileDesc = "Example Report PDF File";
 
 
 module.exports =
@@ -21,5 +23,7 @@ module.exports =
 	reportFolder: reportFolderDesc,
 	searchPageFile: searchPageFileDesc,
 	reportFile: reportFileDesc,
-	outputFile: outputFileDesc
+	outputFile: outputFileDesc,
+	exampleHtmlFile: exampleHtmlFileDesc,
+	exampleReportFile: exampleReportFileDesc
 };

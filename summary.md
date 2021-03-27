@@ -1,12 +1,12 @@
 # Summary
 
-**Version:** 1.0.3
+**Version:** 1.0.4
 
 **Date:** 2021-03-27
 
-**Title:** Renamed Axios Request
+**Title:** HTTP Tests
 
 **Description:**
 
-Renamed './src/common/web/axios-request.js'
-to 'needle-request.js'
+Wrote new command 'test-http'. Used to test HTTP requests
+without database.
