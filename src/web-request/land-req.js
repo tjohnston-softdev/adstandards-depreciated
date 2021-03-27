@@ -8,7 +8,7 @@ const asyncModule = require("async");
 const ora = require("ora");
 const linkPrep = require("../common/web/link-prep");
 const retryLimits = require("../common/web/retry-limits");
-const axiosRequest = require("../common/web/axios-request");
+const needleRequest = require("../common/web/needle-request");
 const webDesc = require("../common/interface/general/web-desc");
 
 
@@ -41,7 +41,7 @@ function coordinateWebRequest(webReqCallback)
 	var landTgtUrl = linkPrep.getLandingPage();
 	var flaggedMessage = "";
 	
-	axiosRequest.getFile(landTgtUrl, webDesc.landingPage, retryLimits.landingPage, true, function (landError, landRes)
+	needleRequest.getFile(landTgtUrl, webDesc.landingPage, retryLimits.landingPage, true, function (landError, landRes)
 	{
 		if (landError !== null)
 		{
@@ -51,7 +51,7 @@ function coordinateWebRequest(webReqCallback)
 		else if (landRes.retryAfter > 0)
 		{
 			// Too many requests - Delay not allowed.
-			axiosRequest.displayTooManyRequests(webReqCallback);
+			needleRequest.displayTooManyRequests(webReqCallback);
 		}
 		else
 		{

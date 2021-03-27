@@ -6,7 +6,7 @@
 const path = require("path");
 const asyncModule = require("async");
 const retryLimits = require("../common/web/retry-limits");
-const axiosRequest = require("../common/web/axios-request");
+const needleRequest = require("../common/web/needle-request");
 const folderTasks = require("../common/file-management/folder-tasks");
 const progBars = require("../common/interface/prog-bars");
 const fsDesc = require("../common/interface/general/fs-desc");
@@ -215,7 +215,7 @@ function callDownload(tDownloadLink, tFolderPath, tFileName, downloadInp, loopPr
 	asyncModule.series(
 	{
 		"folderPrepared": folderTasks.preparePath.bind(null, tFolderPath, fsDesc.reportFolder),
-		"requestOutcome": axiosRequest.getFile.bind(null, tDownloadLink, "Case File", retryLimits.caseFile, false)
+		"requestOutcome": needleRequest.getFile.bind(null, tDownloadLink, "Case File", retryLimits.caseFile, false)
 	},
 	function (dlErr, dlRes)
 	{
@@ -232,7 +232,7 @@ function callDownload(tDownloadLink, tFolderPath, tFileName, downloadInp, loopPr
 		else if (dlRes.requestOutcome.retryAfter > 0)
 		{
 			// Delay not allowed.
-			axiosRequest.displayTooManyRequests(downloadCallback);
+			needleRequest.displayTooManyRequests(downloadCallback);
 		}
 		else
 		{

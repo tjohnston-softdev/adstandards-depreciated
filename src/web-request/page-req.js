@@ -8,7 +8,7 @@
 const path = require("path");
 const asyncModule = require("async");
 const retryLimits = require("../common/web/retry-limits");
-const axiosRequest = require("../common/web/axios-request");
+const needleRequest = require("../common/web/needle-request");
 const fileNames = require("../common/file-management/file-names");
 const fileExists = require("../common/file-management/file-exists");
 const progBars = require("../common/interface/prog-bars");
@@ -109,7 +109,7 @@ function callPageFile(loopIndexObj, pageLinkString, outputPathString, downloadIn
 // Downloads page file from given URL.
 function callDownload(loopIndex, pageLinkStr, outputPathStr, useDelay, linkCount, fileBar, downloadCallback)
 {
-	axiosRequest.getFile(pageLinkStr, webDesc.casesPage, retryLimits.casePage, true, function (dlErr, dlRes)
+	needleRequest.getFile(pageLinkStr, webDesc.casesPage, retryLimits.casePage, true, function (dlErr, dlRes)
 	{
 		if (dlErr !== null)
 		{
@@ -124,7 +124,7 @@ function callDownload(loopIndex, pageLinkStr, outputPathStr, useDelay, linkCount
 		else if (dlRes.retryAfter > 0)
 		{
 			// Delay not allowed.
-			axiosRequest.displayTooManyRequests(downloadCallback);
+			needleRequest.displayTooManyRequests(downloadCallback);
 		}
 		else
 		{

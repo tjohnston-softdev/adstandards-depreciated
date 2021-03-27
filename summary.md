@@ -1,11 +1,12 @@
 # Summary
 
-**Version:** 1.0.2
+**Version:** 1.0.3
 
 **Date:** 2021-03-27
 
-**Title:** Needle HTTP Library
+**Title:** Renamed Axios Request
 
 **Description:**
 
-'needle' is now used for HTTP requests instead of 'axios'
+Renamed './src/common/web/axios-request.js'
+to 'needle-request.js'

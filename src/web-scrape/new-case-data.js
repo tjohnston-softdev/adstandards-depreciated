@@ -10,7 +10,7 @@ const asyncModule = require("async");
 const ora = require("ora");
 const cheerio = require("cheerio");
 const linkPrep = require("../common/web/link-prep");
-const axiosRequest = require("../common/web/axios-request");
+const needleRequest = require("../common/web/needle-request");
 const retryLimits = require("../common/web/retry-limits");
 const webDesc = require("../common/interface/general/web-desc");
 const pageCount = require("./elements/page-count");
@@ -98,7 +98,7 @@ function coordinateNewPageLoop(cutoffDateObj, allowScrapeErr, pageLoopCallback)
 // Downloads current page.
 function callPageDownload(pageLoopObj, pageLinkString, savedCasesArr, downloadCallback)
 {
-	axiosRequest.getFile(pageLinkString, webDesc.casesPage, retryLimits.casePage, true, function (dlErr, dlRes)
+	needleRequest.getFile(pageLinkString, webDesc.casesPage, retryLimits.casePage, true, function (dlErr, dlRes)
 	{
 		if (dlErr !== null)
 		{
@@ -108,7 +108,7 @@ function callPageDownload(pageLoopObj, pageLinkString, savedCasesArr, downloadCa
 		else if (dlRes.retryAfter > 0)
 		{
 			// Too many requests error.
-			axiosRequest.displayTooManyRequests(downloadCallback);
+			needleRequest.displayTooManyRequests(downloadCallback);
 		}
 		else
 		{
