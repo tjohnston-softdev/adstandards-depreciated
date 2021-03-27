@@ -1,7 +1,7 @@
-// HTTP requests using 'axios' library.
+// HTTP requests using 'needle' library.
 
 const asyncModule = require("async");
-const axios = require("axios");
+const needle = require("needle");
 const httpErrorText = require("./errors/http-error-text");
 
 
@@ -12,50 +12,54 @@ function performFileRequest(targetUrlString, requestDescription, retryObject, pl
 	var statusMessage = "";
 	
 	// Runs URL request, allowing a certain number of attempts.
-	asyncModule.retry(retryObject,
-	function (attemptCallback)
+	asyncModule.retry(retryObject, function (attemptCallback)
 	{
-		wrapAxios(targetUrlString, plainText, attemptCallback);
+		wrapNeedle(targetUrlString, plainText, attemptCallback);
 	},
 	function (reqError, reqRes)
 	{
-		if (reqError !== null && reqError.response.status === 429)
+		if (reqError !== null)
+		{
+			// Fatal Error
+			return fileReqCallback(reqError, null);
+		}
+		else if (reqRes.statusCode === 429)
 		{
 			// Too many requests. Make note of delay time.
 			requestResult.retryAfter = getRetryAfter(reqError.response.headers);
 			return fileReqCallback(null, requestResult);
 		}
-		else if (reqError !== null)
+		else if (reqRes.statusCode === 200)
 		{
-			// Request error.
-			statusMessage = httpErrorText.writeStatus(requestDescription, reqError.response);
-			return fileReqCallback(new Error(statusMessage), null);
+			// Successful
+			requestResult.retrievedBody = reqRes.body;
+			return fileReqCallback(null, requestResult);
 		}
 		else
 		{
-			// Successful
-			requestResult.retrievedBody = reqRes.data;
-			return fileReqCallback(null, requestResult);
+			// Status Error
+			statusMessage = httpErrorText.writeStatus(requestDescription, reqRes);
+			return fileReqCallback(new Error(statusMessage), null);
 		}
 	});
 }
 
 
-// Performs request with Axios
-function wrapAxios(tgtUrl, plaText, axiosCallback)
+// Performs request with Needle
+function wrapNeedle(tgtUrl, plaText, needleCallback)
 {
-	var downloadOptions = getDownloadOptions(plaText);
+	var downloadOptions = {decode_response: plaText};
 	
-	axios.get(tgtUrl, downloadOptions)
-	.then(function (completeRequest)
+	needle.get(tgtUrl, downloadOptions, function (needleErr, needleRes)
 	{
-		// Successful
-		return axiosCallback(null, completeRequest);
-	})
-	.catch(function (httpError)
-	{
-		// Error
-		return axiosCallback(httpError, null);
+		if (needleErr !== null)
+		{
+			return needleCallback(needleErr, null);
+		}
+		else
+		{
+			return needleCallback(null, needleRes);
+		}
 	});
 }
 
@@ -74,26 +78,6 @@ function getRetryAfter(headerObject)
 	}
 	
 	return totalDelay;
-}
-
-
-// Decides how to encode HTTP request result based on data type.
-function getDownloadOptions(pTxt)
-{
-	var optRes = {};
-	
-	if (pTxt === true)
-	{
-		// Plain text (HTML)
-		optRes = {};
-	}
-	else
-	{
-		// Binary data (PDF)
-		optRes = {responseEncoding: "binary"};
-	}
-	
-	return optRes;
 }
 
 

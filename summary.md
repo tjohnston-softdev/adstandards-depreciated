@@ -1,11 +1,11 @@
 # Summary
 
-**Version:** 1.0.1
+**Version:** 1.0.2
 
 **Date:** 2021-03-27
 
-**Title:** Opened 1.1 Branch
+**Title:** Needle HTTP Library
 
 **Description:**
 
-Started developing version 1.1
+'needle' is now used for HTTP requests instead of 'axios'

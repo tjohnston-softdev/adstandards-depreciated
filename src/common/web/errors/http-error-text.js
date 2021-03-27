@@ -9,9 +9,9 @@ function writeStatusText(vDesc, vRespData)
 	writeRes += "Error requesting ";
 	writeRes += vDesc;
 	writeRes += " - ";
-	writeRes += vRespData.status;
+	writeRes += vRespData.statusCode;
 	writeRes += " ";
-	writeRes += vRespData.statusText;
+	writeRes += vRespData.statusMessage;
 	
 	return writeRes;
 }

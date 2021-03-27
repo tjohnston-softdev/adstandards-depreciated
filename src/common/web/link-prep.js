@@ -1,6 +1,6 @@
 // These functions help with link preperation
 
-const baseURL = "https://adstandards.com.au/cases";				// Community panel case reports
+const baseURL = "https://adstandards.com.au/cases";
 
 
 // Landing page.
