@@ -1,11 +1,11 @@
 # Summary
 
-**Version:** 1.0.5
+**Version:** 1.0.6
 
 **Date:** 2021-03-27
 
-**Title:** General Cleaning (1.1)
+**Title:** Subfolder Description Markdown
 
 **Description:**
 
-Cleaned up some redundant code. Refer to changelog.
+Rewrote subfolders description text in markdown.
