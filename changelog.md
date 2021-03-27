@@ -1,5 +1,4 @@
 # Changelog
 
-**./disclaimer.md**
-* Replaced old GitLab link with GitHub link.
-* Removed "and maintained"
+* Opened 1.1 Branch
+* Added 'node_modules' to .gitignore

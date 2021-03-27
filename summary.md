@@ -1,11 +1,11 @@
 # Summary
 
-**Version:** 1.0.0
+**Version:** 1.0.1
 
-**Date:** 2021-03-20
+**Date:** 2021-03-27
 
-**Title:** GitHub Link
+**Title:** Opened 1.1 Branch
 
 **Description:**
 
-Replaced old GitLab link with GitHub link in the [disclaimer](./disclaimer.md) file.
+Started developing version 1.1
