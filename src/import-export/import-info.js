@@ -142,7 +142,7 @@ function setMessages(infoObj, impBase, impSuccess, impFail, impSkip)
 }
 
 
-
+// Set import file description.
 function setFileDescription(infoObj, impFileDesc)
 {
 	infoObj.fileDesc = impFileDesc;

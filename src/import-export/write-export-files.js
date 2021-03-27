@@ -39,7 +39,7 @@ function writeExportDataFile(expPathString, expInfoObject, expDataCallback)
 function coordinateDataFile(expPathStr, expInfoObj, dataFileCallback)
 {
 	var writeOptions = fileReadWrite.getWriteStreamOptions();
-	var dataStreamResult = initializeDataResult();
+	var dataStreamResult = {successful: true, errorText: ""};
 	var dataStreamObject = fs.createWriteStream(expPathStr, writeOptions);
 	
 	
@@ -152,19 +152,6 @@ function writeDataStreamError(vDesc)
 {
 	var writeRes = "Error writing " + vDesc + " export file.";	
 	return writeRes;
-}
-
-
-
-// Result object
-function initializeDataResult()
-{
-	var intlRes = {};
-	
-	intlRes["successful"] = true;
-	intlRes["errorText"] = "";
-	
-	return intlRes;
 }
 
 

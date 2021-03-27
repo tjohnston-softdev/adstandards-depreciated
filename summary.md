@@ -1,12 +1,11 @@
 # Summary
 
-**Version:** 1.0.4
+**Version:** 1.0.5
 
 **Date:** 2021-03-27
 
-**Title:** HTTP Tests
+**Title:** General Cleaning (1.1)
 
 **Description:**
 
-Wrote new command 'test-http'. Used to test HTTP requests
-without database.
+Cleaned up some redundant code. Refer to changelog.

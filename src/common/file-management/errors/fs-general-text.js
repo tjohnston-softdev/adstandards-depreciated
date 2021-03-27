@@ -3,6 +3,7 @@
 const path = require("path");
 
 
+// File too large.
 function writeFileTooLargeText(vDesc, vSizeLabel)
 {
 	var writeRes = "";
@@ -15,6 +16,7 @@ function writeFileTooLargeText(vDesc, vSizeLabel)
 }
 
 
+// Empty file.
 function writeFileEmptyText(vDesc)
 {
 	var writeRes = vDesc + " cannot be empty.";
@@ -22,6 +24,7 @@ function writeFileEmptyText(vDesc)
 }
 
 
+// Invalid file.
 function writeInvalidFileText(vDesc, vPath)
 {
 	var writeRes = "";
@@ -34,6 +37,7 @@ function writeInvalidFileText(vDesc, vPath)
 }
 
 
+// Invalid JSON.
 function writeInvalidJsonText(vDesc, vPath)
 {
 	var writeRes = "";
@@ -46,6 +50,7 @@ function writeInvalidJsonText(vDesc, vPath)
 }
 
 
+// Folder creation.
 function writeFolderCreateText(vDesc, vPath)
 {
 	var writeRes = "";
@@ -59,6 +64,7 @@ function writeFolderCreateText(vDesc, vPath)
 }
 
 
+// Folder deletion.
 function writeFolderDeleteText(vDesc, vPath)
 {
 	var writeRes = "";
@@ -72,6 +78,7 @@ function writeFolderDeleteText(vDesc, vPath)
 }
 
 
+// File search.
 function writeFileSearchText(vDesc, vSyntax)
 {
 	var writeRes = "";
@@ -87,6 +94,7 @@ function writeFileSearchText(vDesc, vSyntax)
 }
 
 
+// File already exists.
 function writeFileExistsText(vDesc, vPath)
 {
 	var writeRes = "";

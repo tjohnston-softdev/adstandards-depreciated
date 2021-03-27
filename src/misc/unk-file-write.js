@@ -138,11 +138,7 @@ function callUnknownEntryRowGroup(queryLoopObj, dataStream, rowGroupCallback)
 // Result object.
 function initializeSheetResult()
 {
-	var intlRes = {};
-	
-	intlRes["fileWritten"] = true;
-	intlRes["sheetError"] = "";
-	
+	var intlRes = {fileWritten: true, sheetError: ""};
 	return intlRes;
 }
 

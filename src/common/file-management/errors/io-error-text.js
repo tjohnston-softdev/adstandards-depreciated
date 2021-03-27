@@ -11,6 +11,7 @@
 const path = require("path");
 
 
+// Main function.
 function writeFileActionText(errCode, vContext, vDesc, vPath)
 {
 	var writeRes = "";
@@ -28,7 +29,7 @@ function writeFileActionText(errCode, vContext, vDesc, vPath)
 }
 
 
-
+// Write description.
 function getErrorDescription(eCode)
 {
 	var chosenDescription = "";

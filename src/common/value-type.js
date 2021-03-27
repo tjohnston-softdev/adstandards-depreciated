@@ -24,14 +24,7 @@ function checkObjectType(subjectValue)
 // Checks for valid string (empty or otherwise)
 function checkStringType(subjectValue)
 {
-	var givenType = typeof subjectValue;
-	var checkRes = false;
-	
-	if (subjectValue !== undefined && subjectValue !== null && givenType === "string")
-	{
-		checkRes = true;
-	}
-	
+	var checkRes = (typeof subjectValue === "string");
 	return checkRes;
 }
 

@@ -5,8 +5,6 @@
 	Used in '../new-case-data.js'
 */
 
-
-
 const dateTasks = require("../../common/entry/date-tasks");
 
 

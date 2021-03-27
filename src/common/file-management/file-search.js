@@ -2,7 +2,6 @@
 
 const glob = require("glob");
 const fsGeneralText = require("./errors/fs-general-text");
-const numberRegex = /(\d)+/;
 const searchOptions = {"nodir": true};
 
 
@@ -123,7 +122,7 @@ function isolateNumber(pthStr)
 	var isolateRes = -1;
 	
 	// Searches for numbers within the file path.
-	numberList = pthStr.match(numberRegex);
+	numberList = pthStr.match(/(\d)+/);
 	arrayRetrieved = Array.isArray(numberList);
 	
 	

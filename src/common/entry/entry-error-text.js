@@ -1,6 +1,7 @@
 // Functions write error text related to input validation.
 
 
+// Incorrect value type.
 function writeIncorrectTypeText(vDesc, vType)
 {
 	var writeRes = "";
@@ -13,6 +14,7 @@ function writeIncorrectTypeText(vDesc, vType)
 }
 
 
+// String too long.
 function writeStringTooLongText(vDesc, vMaxLength)
 {
 	var writeRes = "";
@@ -26,6 +28,7 @@ function writeStringTooLongText(vDesc, vMaxLength)
 }
 
 
+// Number range.
 function writeNumberRangeText(vDesc, vMinValue, vMaxValue)
 {
 	var writeRes = "";
@@ -40,7 +43,7 @@ function writeNumberRangeText(vDesc, vMinValue, vMaxValue)
 }
 
 
-
+// Empty value.
 function writeEmptyText(vDesc)
 {
 	var writeRes = vDesc + " cannot be empty.";
@@ -48,6 +51,7 @@ function writeEmptyText(vDesc)
 }
 
 
+// String already taken.
 function writeStringAlreadyTakenText(vDesc, vTakenItem)
 {
 	var writeRes = "";
@@ -62,6 +66,7 @@ function writeStringAlreadyTakenText(vDesc, vTakenItem)
 }
 
 
+// Number already taken.
 function writeNumberAlreadyTakenText(vDesc, vTakenNumber)
 {
 	var writeRes = "";
@@ -75,7 +80,7 @@ function writeNumberAlreadyTakenText(vDesc, vTakenNumber)
 	return writeRes;
 }
 
-
+// Unknown string.
 function writeStringDoesNotExistText(vDesc, vUnknownString)
 {
 	var writeRes = "";
@@ -90,14 +95,14 @@ function writeStringDoesNotExistText(vDesc, vUnknownString)
 }
 
 
-
+// Page number parameter missing.
 function writePageMissingText(vDesc)
 {
 	var writeRes = "Page number parameter is missing from " + vDesc;
 	return writeRes;
 }
 
-
+// Invalid number key.
 function writeInvalidNumberKeyText(vDesc)
 {
 	var writeRes = vDesc + " must be a valid positive whole number.";
@@ -105,6 +110,7 @@ function writeInvalidNumberKeyText(vDesc)
 }
 
 
+// Invalid case code format.
 function writeInvalidCaseCodeText(vCode)
 {
 	var writeRes = "";
@@ -117,7 +123,7 @@ function writeInvalidCaseCodeText(vCode)
 	return writeRes;
 }
 
-
+// Invalid determination date.
 function writeInvalidDeterminationDateText()
 {
 	var writeRes = "Invalid determination date. Must use the format 'yyyy-mm-dd'";

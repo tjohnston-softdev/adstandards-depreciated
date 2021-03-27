@@ -2,11 +2,7 @@
 
 function initializeImportValidationObject()
 {
-	var intlRes = {};
-	
-	intlRes["canContinue"] = true;
-	intlRes["invalidData"] = "";
-	
+	var intlRes = {canContinue: true, invalidData: ""};
 	return intlRes;
 }
 
