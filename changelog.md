@@ -1,14 +1,9 @@
 # Changelog
 
 **archive.js**
-* Renamed the 'test-http' command to 'test-download'
-	* Added header comment
+* Updated './src/test-file-download' requirement.
 
 ---
 
-**Command Name Comments**
-* Reflected the command name change for comments in the following files:
-	* ./src/test-http-requests.js
-	* ./src/file-prep/test-file-save.js
-	* ./src/web-request/example-report-req.js
-	* ./src/web-request/land-req.js
+**./src/test-http-requests.js**
+* Renamed to 'test-file-download.js'

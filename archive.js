@@ -3,7 +3,7 @@ const optDesc = require("./src/common/interface/opt-desc");
 const readRuntimeFiles = require("./src/read-runtime-files");
 const createDatabase = require("./src/create-database");
 const clearDatabase = require("./src/clear-database");
-const testHttpRequests = require("./src/test-http-requests");
+const testFileDownload = require("./src/test-file-download");
 const readLists = require("./src/read-lists");
 const downloadPages = require("./src/download-pages");
 const readCases = require("./src/read-cases");
@@ -44,7 +44,7 @@ program
 .description("downloads test files from adstandards website")
 .action(function()
 {
-	testHttpRequests.performCommand();
+	testFileDownload.performCommand();
 });
 
 
