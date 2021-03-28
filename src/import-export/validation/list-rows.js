@@ -123,7 +123,7 @@ function handleActiveFlag(entryObject, nameLengthValid, validObj)
 	
 	if (nameLengthValid === true)
 	{
-		validActiveFlag = generalItems.checkActiveFlag(entryObject, validObj);
+		handleRes = generalItems.checkActiveFlag(entryObject, validObj);
 	}
 	
 	return handleRes;
