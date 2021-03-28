@@ -1,6 +1,6 @@
 /*
 	This file is responsible for saving downloaded test files.
-	Used in the 'test-http' command.
+	Used in the 'test-download' command.
 */
 
 const asyncModule = require("async");

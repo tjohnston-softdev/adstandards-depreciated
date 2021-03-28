@@ -1,6 +1,6 @@
 /*
 	This file is responsible for downloading the advertisement cases landing page.
-	Used for the 'test-http', 'read-lists', and 'download-pages' commands.
+	Used for the 'test-download', 'read-lists', and 'download-pages' commands.
 	When running 'download-pages', this is used to request the first page.
 */
 

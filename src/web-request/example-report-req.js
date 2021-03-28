@@ -1,6 +1,6 @@
 /*
 	This file is responsible for downloading the example report PDF file.
-	Used for the 'test-http' command.
+	Used for the 'test-download' command.
 */
 
 

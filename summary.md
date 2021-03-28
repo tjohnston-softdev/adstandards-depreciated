@@ -1,11 +1,10 @@
 # Summary
 
-**Version:** 1.0.9
+**Version:** 1.0.10
 
 **Date:** 2021-03-28
 
-**Title:** Improved scrape commenting
+**Title:** Renamed 'test-http' command to 'test-download'
 
 **Description:**
 
-Added comments in web scraping scripts that help separate different IF structures.

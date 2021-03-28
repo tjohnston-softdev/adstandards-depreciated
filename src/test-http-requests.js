@@ -8,7 +8,7 @@ const exitProgram = require("./common/exit-program");
 
 
 /*
-	Command: test-http
+	Command: test-download
 	Description: Downloads test files from Adstandards website
 	Steps:
 		* Download landing page HTML file.

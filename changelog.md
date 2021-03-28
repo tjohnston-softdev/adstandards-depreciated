@@ -1,9 +1,14 @@
 # Changelog
 
-**./src/web-scrape/elements/**
-* Added comment between validation and result IF structures for the following:
-	* page-count.js - readPageCountNumber
-	* select-basic.js - readSelectListData, readCurrentOption
-	* table-case-cells.js - addCurrentRow
-	* table-case-rows.js - readRowObjects, readCurrentRow
-* It would not be feasible to split the IF structures into individual functions without some major code redesign.
+**archive.js**
+* Renamed the 'test-http' command to 'test-download'
+	* Added header comment
+
+---
+
+**Command Name Comments**
+* Reflected the command name change for comments in the following files:
+	* ./src/test-http-requests.js
+	* ./src/file-prep/test-file-save.js
+	* ./src/web-request/example-report-req.js
+	* ./src/web-request/land-req.js

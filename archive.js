@@ -38,8 +38,9 @@ program
 });
 
 
+// test-download
 program
-.command("test-http")
+.command("test-download")
 .description("downloads test files from adstandards website")
 .action(function()
 {
