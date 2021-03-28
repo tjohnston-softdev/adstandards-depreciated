@@ -41,6 +41,8 @@ function readRowObjects(searchPageObject, ignoreCaseErrors, rowCallback)
 		scrapeResultObject.scrapeSuccessful = rowLoopSuccessful;
 	}
 	
+	// Scrape complete.
+	
 	if (scrapeResultObject.scrapeSuccessful === true || ignoreCaseErrors === true)
 	{
 		// Row scrape successful.
@@ -151,6 +153,8 @@ function readCurrentRow(rowElement, searchPage, skipBad, scrapeResult)
 		canAdd = true;
 	}
 	
+	
+	// Reading complete.
 	
 	
 	if (canAdd === true)

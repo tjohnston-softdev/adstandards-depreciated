@@ -92,6 +92,9 @@ function readPageCountNumber(searchPageObject, ignoreErrors, countNumberCallback
 	}
 	
 	
+	// Reading complete
+	
+	
 	if (readSuccessful === true)
 	{
 		// Page count successful.

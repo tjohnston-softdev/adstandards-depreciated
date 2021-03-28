@@ -1,12 +1,11 @@
 # Summary
 
-**Version:** 1.0.8
+**Version:** 1.0.9
 
 **Date:** 2021-03-28
 
-**Title:** Trimmed import validation variable names.
+**Title:** Improved scrape commenting
 
 **Description:**
 
-Shortened variable names where possible in:  
-./src/import-export/validation/case-rows.js
+Added comments in web scraping scripts that help separate different IF structures.

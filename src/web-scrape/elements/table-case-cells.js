@@ -119,6 +119,8 @@ function addCurrentRow(searchPageObj, tblRowObj, skipBadCases, scrapeResultObj)
 	}
 	
 	
+	// Validation complete.
+	
 	
 	if (canAdd === true && codeFormatValid === true)
 	{

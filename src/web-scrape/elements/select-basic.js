@@ -55,6 +55,7 @@ function readSelectListData(selectDesc, optionDesc, inputDesc, listElementSelect
 	}
 	
 	
+	// Scrape complete
 	
 	if (scrapeResultObject.scrapeSuccessful === true || ignoreErrors === true)
 	{
@@ -151,6 +152,8 @@ function readCurrentOption(oDesc, oSelect, optElement, mLength, sPage, skipBad, 
 	{
 		canAdd = true;
 	}
+	
+	// Validation complete
 	
 	
 	if (canAdd === true)
