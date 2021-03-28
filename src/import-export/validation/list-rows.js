@@ -19,14 +19,14 @@ function validateImportedListObjects(objectList, listInfoObject, ignoreInvalidIn
 	var currentEntryObject = {};
 	var currentValid = false;
 	
-	var validationResult = importValidationResult.initializeObject();
+	var validationResultObject = importValidationResult.initializeObject();
 	
 	
 	// Validates objects in a loop.
-	while (objectIndex >= 0 && objectIndex < objectList.length && validationResult.canContinue === true)
+	while (objectIndex >= 0 && objectIndex < objectList.length && validationResultObject.canContinue === true)
 	{
 		currentEntryObject = objectList[objectIndex];
-		currentValid = handleCurrentObject(currentEntryObject, listInfoObject, validationResult);
+		currentValid = handleCurrentObject(currentEntryObject, listInfoObject, validationResultObject);
 		
 		if (currentValid === true)
 		{
@@ -42,59 +42,88 @@ function validateImportedListObjects(objectList, listInfoObject, ignoreInvalidIn
 		else
 		{
 			// Error flagged.
-			validationResult.canContinue = false;
+			validationResultObject.canContinue = false;
 		}
 		
 	}
 	
 	
-	return validationResult;
+	return validationResultObject;
 }
 
 
 // Validates current object.
-function handleCurrentObject(entryObject, listInfoObj, validationRes)
+function handleCurrentObject(listEntry, listInfoObj, validationResult)
 {
-	var validBaseType = false;
-	var validNumberKey = false;
-	var validNameType = false;
-	var validNameLength = false;
-	var validActiveFlag = false;
+	var validBaseType = rowObject.checkBaseType(listEntry, listInfoObj.schemaDesc, validationResult);
+	var validNumberKey = handleNumberID(listEntry, listInfoObj, validBaseType, validationResult);
+	var validNameType = handleNameType(listEntry, listInfoObj, validNumberKey, validationResult);
+	var validNameLength = handleNameLength(listEntry, listInfoObj, validNameType, validationResult);
+	var validActiveFlag = handleActiveFlag(listEntry, validNameLength, validationResult);
 	
 	var handleRes = false;
-	
-	// Checks base object type.
-	validBaseType = rowObject.checkBaseType(entryObject, listInfoObj.schemaDesc, validationRes);
-	
-	
-	if (validBaseType === true)
-	{
-		// Checks number ID.
-		validNumberKey = generalItems.checkEntryID(entryObject, listInfoObj.keyCol, validationRes);
-	}
-	
-	if (validNumberKey === true)
-	{
-		// Checks name type.
-		validNameType = listItemName.checkType(entryObject, listInfoObj, validationRes);
-	}
-	
-	if (validNameType === true)
-	{
-		// Checks name length.
-		validNameLength = listItemName.checkLength(entryObject, listInfoObj, validationRes);
-	}
-	
-	if (validNameLength === true)
-	{
-		// Check active flag.
-		validActiveFlag = generalItems.checkActiveFlag(entryObject, validationRes);
-	}
 	
 	if (validActiveFlag === true)
 	{
 		// Object valid.
 		handleRes = true;
+	}
+	
+	
+	return handleRes;
+}
+
+
+// Checks number ID.
+function handleNumberID(entryObject, listInfo, baseValid, validObj)
+{
+	var handleRes = false;
+	
+	if (baseValid === true)
+	{
+		handleRes = generalItems.checkEntryID(entryObject, listInfo.keyCol, validObj);
+	}
+	
+	return handleRes;
+}
+
+
+// Checks name type.
+function handleNameType(entryObject, listInfo, keyValid, validObj)
+{
+	var handleRes = false;
+	
+	if (keyValid === true)
+	{
+		handleRes = listItemName.checkType(entryObject, listInfo, validObj);
+	}
+	
+	return handleRes;
+}
+
+
+// Checks name length.
+function handleNameLength(entryObject, listInfo, nameTypeValid, validObj)
+{
+	var handleRes = false;
+	
+	if (nameTypeValid === true)
+	{
+		handleRes = listItemName.checkLength(entryObject, listInfo, validObj);
+	}
+	
+	return handleRes;
+}
+
+
+// Check active flag.
+function handleActiveFlag(entryObject, nameLengthValid, validObj)
+{
+	var handleRes = false;
+	
+	if (nameLengthValid === true)
+	{
+		validActiveFlag = generalItems.checkActiveFlag(entryObject, validObj);
 	}
 	
 	return handleRes;
