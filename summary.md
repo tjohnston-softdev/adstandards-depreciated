@@ -1,10 +1,10 @@
 # Summary
 
-**Version:** 1.0.14
+**Version:** 1.1.0
 
 **Date:** 2021-03-28
 
-**Title:** Disclaimer Last Updated
+**Title:** Version 1.1 Complete
 
 **Description:**
 
