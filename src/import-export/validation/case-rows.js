@@ -66,17 +66,17 @@ function handleCurrentObject(caseObject, caseInfoObj, validationResult)
 	var validCaseCodeString = handleCaseCodeString(caseObject, validEntryID, validationResult);
 	var validCaseCodeSyntax = handleCaseCodeFormat(caseObject, validCaseCodeString, validationResult);
 	
-	var validAdvertiserID = handleForeignKeyNumber(caseObject, colNames.advertiserNum, colNames.advertiserNum, validCaseCodeSyntax, validationResult);
-	var validDescriptionString = handleDescription(caseObject, validAdvertiserID, validationResult);
+	var validAdvertiser = handleForeignKeyNumber(caseObject, colNames.advertiserNum, colNames.advertiserNum, validCaseCodeSyntax, validationResult);
+	var validDescription = handleDescription(caseObject, validAdvertiser, validationResult);
 	
-	var validDeterminationFlag = handleDeterminationFlag(caseObject, validDescriptionString, validationResult);
-	var validProductCategoryID = handleForeignKeyNumber(caseObject, colNames.prodCatNum, inputDesc.productCategory, validDeterminationFlag, validationResult);
-	var validMediaTypeID = handleForeignKeyNumber(caseObject, colNames.medTypeNum, inputDesc.mediaType, validProductCategoryID, validationResult);
+	var validDeterFlag = handleDeterminationFlag(caseObject, validDescription, validationResult);
+	var validProductCategory = handleForeignKeyNumber(caseObject, colNames.prodCatNum, inputDesc.productCategory, validDeterFlag, validationResult);
+	var validMediaType = handleForeignKeyNumber(caseObject, colNames.medTypeNum, inputDesc.mediaType, validProductCategory, validationResult);
 	
-	var validDeterminationDate = handleDeterminationDate(caseObject, validMediaTypeID, validationResult);
-	var validArchiveTimestamp = handleArchiveTimestamp(caseObject, validDeterminationDate, validationResult);
+	var validDeterDate = handleDeterminationDate(caseObject, validMediaType, validationResult);
+	var validArchiveTime = handleArchiveTimestamp(caseObject, validDeterDate, validationResult);
 	
-	var validDocumentURL = handleDocumentURL(caseObject, validArchiveTimestamp, validationResult);
+	var validDocumentURL = handleDocumentURL(caseObject, validArchiveTime, validationResult);
 	var validDownloadFlag = handleDownloadFlag(caseObject, validDocumentURL, validationResult);
 	var validActiveFlag = handleActiveFlag(caseObject, validDownloadFlag, validationResult);
 	

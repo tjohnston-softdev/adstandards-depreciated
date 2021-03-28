@@ -1,12 +1,12 @@
 # Summary
 
-**Version:** 1.0.7
+**Version:** 1.0.8
 
 **Date:** 2021-03-28
 
-**Title:** Neatened import validation structure
+**Title:** Trimmed import validation variable names.
 
 **Description:**
 
-* Neatened the structure of CSV import validation scripts.
-* Each validation task is called by a separate function instead of an IF structure.
+Shortened variable names where possible in:  
+./src/import-export/validation/case-rows.js
