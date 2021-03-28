@@ -1,5 +1,3 @@
-
-
 # Adstandards Archive Backend
 by Tyrone Johnston
 
@@ -7,6 +5,8 @@ by Tyrone Johnston
 
 ### Introduction
 This is a Node JS command line application used to scrape and archive advertising complaint case reports from [Adstandards Australia](https://adstandards.com.au). I wrote this program as an exercise in software development, database design, web scraping, and archiving public information.
+
+---
 
 ### What is Adstandards?
 To quote their website:
@@ -17,8 +17,12 @@ To quote their website:
 
 Adstandards, being the self-regulating agency for advertisement content in Australia, enables members of the general public to submit complaints regarding advertisements that can be considered offensive in some way. These complaints are then reviewed by a community panel to assess whether they are justified based on prevailing community values. Reports of these complaints and their outcomes are then [published](https://adstandards.com.au/cases) on their website for public viewing.
 
+---
+
 ### Inspiration
 After I had finished [maze-graph-pathfinding](https://github.com/tjohnston-softdev/maze-graph-pathfinding), I wanted to write a piece of software to help me learn more about web scraping.
+
+---
 
 ### Getting Started
 After downloading a local copy of the project, open a terminal inside the root folder and run `npm install`. Afterwards, run `node archive` to confirm that the program has been installed and to see a list of supported commands.
@@ -38,16 +42,12 @@ Here is a table of the main archive commands in suggested order of execution:
 
 Run `archive.js` for other commands.
 
-
-### Future
-- [ ] Maintain official case reports archive using this program.
-- [ ] Write server API for database.
-- [ ] Develop front-end website for server API.
-
-As this is a personal project, I am not actively looking for contributions. However, I am open to suggestions, bug reports, etc.
+---
 
 
 ### Legal
-This work is licensed under a [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. For more information as to why I chose this license, read this [disclaimer](./disclaimer.md)
+This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).   
+Read the [disclaimer](./disclaimer.md) for more information.
 
 ![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
+
