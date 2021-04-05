@@ -1,14 +1,10 @@
 # Adstandards Archive Backend
-by Tyrone Johnston
 
----
-
-### Introduction
 This is a Node JS command line application used to scrape and archive advertising complaint case reports from [Adstandards Australia](https://adstandards.com.au). I wrote this program as an exercise in software development, database design, web scraping, and archiving public information.
 
 ---
 
-### What is Adstandards?
+## What is Adstandards?
 To quote their website:
 
 >Ad Standards manages the complaint resolution process of the advertising self-regulation system. Our vision is to be Australia’s community voice for complaints about advertising and marketing standards. Our purpose is to give a voice to consumer values and guide industry in maintaining decent and honest advertising aligning with prevailing community standards.
@@ -19,12 +15,7 @@ Adstandards, being the self-regulating agency for advertisement content in Austr
 
 ---
 
-### Inspiration
-After I had finished [maze-graph-pathfinding](https://github.com/tjohnston-softdev/maze-graph-pathfinding), I wanted to write a piece of software to help me learn more about web scraping.
-
----
-
-### Getting Started
+## Getting Started
 After downloading a local copy of the project, open a terminal inside the root folder and run `npm install`. Afterwards, run `node archive` to confirm that the program has been installed and to see a list of supported commands.
 
 The different tasks of this program have been split into several commands so that data archiving can be executed in steps and not just as one huge action. Furthermore, tasks that are likely to take a long time can be aborted and resumed later on as desired.
@@ -45,7 +36,7 @@ Run `archive.js` for other commands.
 ---
 
 
-### Legal
+## Legal
 This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).   
 Read the [disclaimer](./disclaimer.md) for more information.
 
