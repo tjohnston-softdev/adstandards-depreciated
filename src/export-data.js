@@ -1,6 +1,5 @@
 const asyncModule = require("async");
 const clear = require("clear");
-const inpImportExport = require("./input/inp-import-export");
 const folderIntl = require("./file-prep/folder-intl");
 const exportPaths = require("./import-export/export-paths");
 const exportInfo = require("./import-export/export-info");
@@ -22,20 +21,6 @@ const exitProgram = require("./common/exit-program");
 		* Export MediaType table data.
 		* Export CaseFile table data.
 */
-
-
-
-function exportArchiveDatabase(argTargetFolderPath, cmdOptions)
-{
-	var preparedInputObject = inpImportExport.prepareArgs(argTargetFolderPath, storedPaths.exportFolder);
-	
-	if (preparedInputObject.valid === true)
-	{
-		inpImportExport.prepareOverwrite(cmdOptions, preparedInputObject);
-		clear();
-		executeDataExportTasks(preparedInputObject);
-	}
-}
 
 
 

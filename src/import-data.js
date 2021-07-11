@@ -1,13 +1,11 @@
 const asyncModule = require("async");
 const clear = require("clear");
-const inpImportExport = require("./input/inp-import-export");
 const archiveClear = require("./database-prep/archive-clear");
 const folderIntl = require("./file-prep/folder-intl");
 const importPaths = require("./import-export/import-paths");
 const importInfo = require("./import-export/import-info");
 const readImportFiles = require("./import-export/read-import-files");
 const exitProgram = require("./common/exit-program");
-
 
 
 /*
@@ -28,19 +26,6 @@ const exitProgram = require("./common/exit-program");
 		* Read MediaType data file and insert contents.
 		* Read CaseFile data file and insert contents.
 */
-
-
-function importSavedData(argTargetFolderPath, cmdOptions)
-{
-	var preparedInputObject = inpImportExport.prepareArgs(argTargetFolderPath, ".");
-	
-	if (preparedInputObject.valid === true)
-	{
-		inpImportExport.prepareIgnoreErrors(cmdOptions, preparedInputObject);
-		clear();
-		executeImportPreperationTasks(preparedInputObject);
-	}
-}
 
 
 
