@@ -1,5 +1,11 @@
 # Changelog
 
 **./package.json**
-* Updated 'cheerio' package.
-	* Fixed two high security vulnerabilities related to previous versions.
+* Updated to latest version:
+	* cli-progress
+	* commander
+	* fs-extra
+	* glob
+	* needle
+	* ora
+	* validator
