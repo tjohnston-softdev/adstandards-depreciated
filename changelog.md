@@ -1,12 +1,9 @@
 # Changelog
 
-**./src/misc/unk-file-check.js**
+**./src/misc/unk-file-write.js**
 * Deleted file.
 
 ---
 
 **./src/unknown-cases.js**
-* Removed requirements: 
-	* ./misc/unk-file-check
-	* ./common/exit-program
-* Removed result IF structure from 'executeExportTasks'
+* This file is now empty.
