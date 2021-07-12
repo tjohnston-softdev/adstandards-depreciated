@@ -1,5 +1,4 @@
 # Changelog
 
-**./archive.js**
-* Removed requirement: './src/unknown-cases'
-* Removed 'unknown' command.
+**./src/unknown-cases.js**
+* Deleted file.
