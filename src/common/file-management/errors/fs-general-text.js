@@ -94,21 +94,6 @@ function writeFileSearchText(vDesc, vSyntax)
 }
 
 
-// File already exists.
-function writeFileExistsText(vDesc, vPath)
-{
-	var writeRes = "";
-	
-	writeRes += vDesc;
-	writeRes += " already exists.\n";
-	writeRes += path.resolve(vPath);
-	
-	return writeRes;
-}
-
-
-
-
 module.exports =
 {
 	writeFileTooLarge: writeFileTooLargeText,
@@ -117,6 +102,5 @@ module.exports =
 	writeInvalidJson: writeInvalidJsonText,
 	writeFolderCreate: writeFolderCreateText,
 	writeFolderDelete: writeFolderDeleteText,
-	writeFileSearch: writeFileSearchText,
-	writeFileExists: writeFileExistsText
+	writeFileSearch: writeFileSearchText
 };

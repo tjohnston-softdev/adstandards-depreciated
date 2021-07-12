@@ -49,16 +49,6 @@ function writeCaseDataInsert(vEntryList)
 }
 
 
-// Insert exported rows.
-function writeRowImportInsert(vEntryList, vTableName)
-{
-	var queryFormat = "INSERT INTO ?? VALUES ?";
-	var queryParameters = [vTableName, vEntryList];
-	var writeRes = mysql.format(queryFormat, queryParameters);
-	return writeRes;
-}
-
-
 
 // Writes column list for inserting case data.
 function getCaseColumns()
@@ -96,6 +86,5 @@ module.exports =
 {
 	writeCommonList: writeCommonListInsert,
 	writeAdvertiser: writeAdvertiserInsert,
-	writeCases: writeCaseDataInsert,
-	writeImportInsert: writeRowImportInsert
+	writeCases: writeCaseDataInsert
 };

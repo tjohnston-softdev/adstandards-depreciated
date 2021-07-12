@@ -9,7 +9,6 @@ const linkLengthLimit = defineLimit(0, 250);									// URL length.
 const pageNumberLimit = defineLimit(1, 1000);									// Page number limit.
 const fileGroupSizeNumber = 500;												// Maximum number of files that can be processed at once.
 const maxPathLengthLimit = 5000;												// Maximum path length.
-const rowCacheSizeNumber = 1000;												// Maximum number of rows that can be processed at once.
 
 
 function defineLimit(dMin, dMax)
@@ -31,6 +30,5 @@ module.exports =
 	linkLength: linkLengthLimit,
 	pageNumber: pageNumberLimit,
 	fileGroupSize: fileGroupSizeNumber,
-	maxPathLength: maxPathLengthLimit,
-	rowCacheSize: rowCacheSizeNumber
+	maxPathLength: maxPathLengthLimit
 };

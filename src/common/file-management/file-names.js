@@ -22,7 +22,7 @@ function getSearchPageSyntaxDefinition(cacheRoot)
 }
 
 
-// Search syntax for a given report PDF file.
+// Search syntax for a given report PDF.
 function getReportFileSyntaxDefinition(reportFolderRoot, tgtName)
 {
 	var syntaxRes = path.join(reportFolderRoot, nestWildcard, tgtName);
@@ -30,7 +30,7 @@ function getReportFileSyntaxDefinition(reportFolderRoot, tgtName)
 }
 
 
-// Search syntax for all PDF files.
+// Search syntax for all PDFs.
 function getReportNestSyntaxDefinition(reportFolderRoot)
 {
 	var syntaxRes = path.join(reportFolderRoot, nestWildcard, "*.pdf");

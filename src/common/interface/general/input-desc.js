@@ -8,9 +8,7 @@ const caseNumberDesc = "Case Code";
 const caseFileDesc = "Case Document Link";
 const advertiserDesc = "Advertiser Name";
 const summaryDesc = "Advertisement Description";
-const folderPathDesc = "Folder Path";
 const archiveTimestampDesc = "Archive Timestamp";
-const outputFilePathDesc = "Output File Path";
 
 
 module.exports =
@@ -23,7 +21,5 @@ module.exports =
 	caseFile: caseFileDesc,
 	advertiser: advertiserDesc,
 	summary: summaryDesc,
-	folderPath: folderPathDesc,
-	archiveTimestamp: archiveTimestampDesc,
-	outputFilePath: outputFilePathDesc
+	archiveTimestamp: archiveTimestampDesc
 };

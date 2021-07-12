@@ -2,9 +2,7 @@
 
 const dbErrorText = require("./errors/db-error-text");
 const selectQueryText = require("./queries/select-query-text");
-const dataGeneral = require("./row-data/data-general");
 const dataCaseDocuments = require("./row-data/data-case-documents");
-const dataUnknown = require("./row-data/data-unknown");
 
 
 
@@ -67,36 +65,6 @@ function selectCaseDocumentLinkRows(connObj, urlDesc, offsetNum, groupSize, sele
 }
 
 
-
-// Checks whether there is an advertisement case entry with a given key.
-function selectCaseCodeKeyExists(connObj, keyDesc, targetKey, selectCallback)
-{
-	var queryText = selectQueryText.writeCaseKey(targetKey);
-	var flaggedMessage = "";
-	
-	connObj.query(queryText, function (selectErr, selectRes, selectFields)
-	{
-		if (selectErr !== null)
-		{
-			// Select error.
-			flaggedMessage = dbErrorText.writeSelect(keyDesc, selectErr);
-			return selectCallback(new Error(flaggedMessage), null);
-		}
-		else if (selectRes.length > 0)
-		{
-			// Key exists.
-			return selectCallback(null, true);
-		}
-		else
-		{
-			// Key does not exist.
-			return selectCallback(null, false);
-		}
-	});
-	
-}
-
-
 // Retrieves the most recent determination date out of all advertisement cases.
 function selectLatestDeterminationRow(connObj, dateDesc, selectCallback)
 {
@@ -131,62 +99,11 @@ function selectLatestDeterminationRow(connObj, dateDesc, selectCallback)
 }
 
 
-// Retrieves rows from the database for export.
-function selectExportDataRows(connObj, tblName, tblDesc, keyAttr, offsetNum, groupSize, selectCallback)
-{
-	var queryText = selectQueryText.writeExportRow(tblName, keyAttr, offsetNum, groupSize);
-	var retrievedRows = [];
-	var flaggedMessage = "";
-	
-	connObj.query(queryText, function (selectErr, selectRes, selectFields)
-	{
-		if (selectErr !== undefined && selectErr !== null)
-		{
-			flaggedMessage = dbErrorText.writeSelect(tblDesc, selectErr);
-			return selectCallback(new Error(flaggedMessage), null);
-		}
-		else
-		{
-			retrievedRows = dataGeneral.prepareGeneral(selectRes);
-			return selectCallback(null, retrievedRows);
-		}
-	});
-	
-}
-
-
-// Retrieves advertisement case entries with missing field values.
-function selectUnknownEntryDataRows(connObj, tblDesc, offsetNum, groupSize, selectCallback)
-{
-	var queryText = selectQueryText.writeUnknownEntries(offsetNum, groupSize);
-	var retrievedRows = [];
-	var flaggedMessage = "";
-	
-	connObj.query(queryText, function (selectErr, selectRes, selectFields)
-	{
-		if (selectErr !== undefined && selectErr !== null)
-		{
-			flaggedMessage = dbErrorText.writeSelect(tblDesc, selectErr);
-			return selectCallback(new Error(flaggedMessage), null);
-		}
-		else
-		{
-			retrievedRows = dataUnknown.prepareUnknownEntries(selectRes);
-			return selectCallback(null, retrievedRows);
-		}
-	});
-	
-}
-
-
 
 
 module.exports =
 {
 	selectListItemExists: selectListItemExistsRow,
 	selectCaseDocumentLinks: selectCaseDocumentLinkRows,
-	selectCaseCodeExists: selectCaseCodeKeyExists,
-	selectLatestDetermination: selectLatestDeterminationRow,
-	selectExportData: selectExportDataRows,
-	selectUnknownEntryData: selectUnknownEntryDataRows
+	selectLatestDetermination: selectLatestDeterminationRow
 };

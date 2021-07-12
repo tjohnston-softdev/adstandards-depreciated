@@ -68,35 +68,11 @@ function insertCaseDataRows(connObj, tblDesc, valueArray, insertCallback)
 	
 }
 
-// Insert imported rows.
-function insertImportedDataRows(connObj, tblName, tblDesc, valueArray, insertCallback)
-{
-	var queryText = insertQueryText.writeImportInsert(valueArray, tblName);
-	var flaggedMessage = "";
-	
-	
-	connObj.query(queryText, function (insertError, insertRes, insertFields)
-	{
-		if (insertError !== undefined && insertError !== null)
-		{
-			flaggedMessage = dbErrorText.writeInsert(tblDesc, insertError);
-			return insertCallback(new Error(flaggedMessage), null);
-		}
-		else
-		{
-			return insertCallback(null, true);
-		}
-	});
-}
-
-
-
 
 
 module.exports =
 {
 	insertSimpleListData: insertSimpleListDataRows,
 	insertAdvertiser: insertAdvertiserRow,
-	insertCases: insertCaseDataRows,
-	insertImportedData: insertImportedDataRows
+	insertCases: insertCaseDataRows
 };

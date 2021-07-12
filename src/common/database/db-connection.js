@@ -28,12 +28,13 @@ function openDatabaseConnection(scriptMode, connectionCallback)
 	{
 		if (connError !== undefined && connError !== null)
 		{
+			// Error opening connection.
 			flaggedMessage = errorText.writeConnection(connError.address, connError.port);
 			return connectionCallback(new Error(flaggedMessage), null);
 		}
 		else
 		{
-			// Database connection object.
+			// Database connection successful.
 			return connectionCallback(null, connRes);
 		}
 	});
@@ -49,6 +50,7 @@ function closeDatabaseConnection(finishedConnection, endCallback)
 	{
 		if (disconnectError !== undefined && disconnectError !== null)
 		{
+			// Error closing connection.
 			flaggedMessage = errorText.writeDisconnect();
 			return endCallback(new Error(flaggedMessage), null);
 		}

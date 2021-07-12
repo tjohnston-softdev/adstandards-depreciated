@@ -57,35 +57,6 @@ function checkFileExistsOptional(targetPathString, fileDescription, existCallbac
 }
 
 
-// Missing
-function checkFileExistsMissing(targetPathString, fileDescription, missingCallback)
-{
-	var flaggedMessage = "";
-	
-	fs.stat(targetPathString, function (fileError, statObject)
-	{
-		if (fileError !== null && fileError.code === "ENOENT")
-		{
-			// File system entry does not exist - Successful.
-			return missingCallback(null, true);
-		}
-		else if (fileError !== null)
-		{
-			// File check error.
-			flaggedMessage = ioErrorText.writeFileAction(fileError.code, "checking", fileDescription, targetPathString);
-			return missingCallback(new Error(flaggedMessage), null);
-		}
-		else
-		{
-			// Entry exists - Unsuccessful.
-			flaggedMessage = fsGeneralText.writeFileExists(fileDescription, targetPathString);
-			return missingCallback(new Error(flaggedMessage), null);
-		}
-	});
-	
-}
-
-
 
 // Checks whether an entry is a valid file within a certain size limit.
 function verifyFileData(dataObj, tPathStr, fileDesc, sizeObj, fileDataCallback)
@@ -125,6 +96,5 @@ function verifyFileData(dataObj, tPathStr, fileDesc, sizeObj, fileDataCallback)
 module.exports =
 {
 	checkRequired: checkFileExistsRequired,
-	checkOptional: checkFileExistsOptional,
-	checkMissing: checkFileExistsMissing
+	checkOptional: checkFileExistsOptional
 };

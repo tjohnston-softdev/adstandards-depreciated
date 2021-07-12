@@ -13,7 +13,7 @@ const maxDefinitionBytes = kbSize * 25;							// Definition script.
 const maxClearAllBytes = kbSize * 5;							// Clear all script.
 const maxClearCasesBytes = kbSize * 2;							// Clear cases script.
 const maxWebPageBytes = mbSize * 2;								// HTML web page.
-const maxReportBytes = maxWebPageBytes;							// Report PDF file.
+const maxReportBytes = maxWebPageBytes;							// Report PDF.
 
 
 // Size limit objects.

@@ -43,20 +43,6 @@ function checkBooleanType(subjectValue)
 }
 
 
-// Checks for binary number.
-function checkTrueFalseFlagType(subjectValue)
-{
-	var checkRes = false;
-	
-	if (subjectValue === 0 || subjectValue === 1)
-	{
-		checkRes = true;
-	}
-	
-	return checkRes;
-}
-
-
 
 // Checks if advertisement case key string has a valid format.
 function checkCaseNumberValidSyntax(subjectString)
@@ -95,7 +81,6 @@ module.exports =
 	checkObject: checkObjectType,
 	checkString: checkStringType,
 	checkBoolean: checkBooleanType,
-	checkTrueFalseFlag: checkTrueFalseFlagType,
 	checkCaseNumberSyntax: checkCaseNumberValidSyntax,
 	sanitizeString: sanitizeInputString
 };

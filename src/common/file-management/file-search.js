@@ -29,7 +29,7 @@ function getSavedPageFiles(fileSyntax, fileSearchDescription, searchCallback)
 }
 
 
-// Retrieves target advertisement case report PDF file.
+// Retrieves target advertisement case report PDF.
 function getSavedReportFile(fileSyntax, fileSearchDescription, searchCallback)
 {
 	var retrievedPath = "";

@@ -7,7 +7,6 @@ const clearDownloadPagesDesc = "deletes existing HTML page files before download
 const clearReadCasesDesc = "removes existing case report entries from the archive database";
 const eraseReadCasesDesc = "deletes HTML page files after scraping is complete";
 const clearDownloadReportsDesc = "deletes existing report .pdf files before download begins";
-const importIgnoreErrorsDesc = "ignores CSV data errors and skips affected rows";
 
 
 
@@ -19,6 +18,5 @@ module.exports =
 	clearDownloadPages: clearDownloadPagesDesc,
 	clearReadCases: clearReadCasesDesc,
 	eraseReadCases: eraseReadCasesDesc,
-	clearDownloadReports: clearDownloadReportsDesc,
-	importIgnoreErrors: importIgnoreErrorsDesc
+	clearDownloadReports: clearDownloadReportsDesc
 };

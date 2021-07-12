@@ -48,28 +48,6 @@ function initializeReportFolder(reportFolderCallback)
 }
 
 
-// Import-Export target folder.
-function initializeTargetFolder(intlPath, targetFolderCallback)
-{
-	var targetFolderSpinner = ora("Initializing Target Folder").start();
-	
-	folderTasks.preparePath(intlPath, "Target Folder", function (tPathErr, tPathRes)
-	{
-		if (tPathErr !== null)
-		{
-			targetFolderSpinner.fail("Target Folder Error");
-			return targetFolderCallback(tPathErr, null);
-		}
-		else
-		{
-			targetFolderSpinner.succeed("Target Folder Initialized");
-			return targetFolderCallback(null, true);
-		}
-	});
-	
-}
-
-
 // HTTP test folder.
 function initializeHttpTestFolder(testFolderCallback)
 {
@@ -96,7 +74,6 @@ function initializeHttpTestFolder(testFolderCallback)
 module.exports =
 {
 	initializePages: initializePagesCacheFolder,
-	initializeReports: initializeReportFolder,
-	initializeTarget: initializeTargetFolder,
+	initializeReports: initializeReportFolder
 	initializeHttpTest: initializeHttpTestFolder
 };
