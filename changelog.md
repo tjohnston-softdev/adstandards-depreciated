@@ -1,13 +1,12 @@
 # Changelog
 
-**./src/input/inp-unknown.js**
+**./src/misc/unk-file-check.js**
 * Deleted file.
 
 ---
 
 **./src/unknown-cases.js**
-* Removed requirements:
-	* clear
-	* ./input/inp-unknown
-* Removed 'getUnknownCaseData' function.
-* Removed header comment.
+* Removed requirements: 
+	* ./misc/unk-file-check
+	* ./common/exit-program
+* Removed result IF structure from 'executeExportTasks'
