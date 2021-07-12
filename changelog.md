@@ -1,7 +1,4 @@
 # Changelog
 
-**./src/import-export/validation/**
-* Deleted files:
-	* case-rows.js
-	* list-rows.js
-* Added placeholder file.
+**./src/import-export**
+* Deleted folder.
