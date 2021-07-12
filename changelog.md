@@ -1,4 +1,4 @@
 # Changelog
 
-**./src/misc/sub**
-* Deleted folder.
+**.package.json**
+* Uninstalled 'papaparse' package.
