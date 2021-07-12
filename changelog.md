@@ -1,5 +1,4 @@
 # Changelog
 
-**./archive.js**
-* Removed requirement: './src/import-data'
-* Removed the 'import' command.
+**./src/import-data.js**
+* Deleted file.
