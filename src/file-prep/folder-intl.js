@@ -74,6 +74,6 @@ function initializeHttpTestFolder(testFolderCallback)
 module.exports =
 {
 	initializePages: initializePagesCacheFolder,
-	initializeReports: initializeReportFolder
+	initializeReports: initializeReportFolder,
 	initializeHttpTest: initializeHttpTestFolder
 };
