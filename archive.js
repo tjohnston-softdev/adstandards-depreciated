@@ -10,7 +10,6 @@ const readCases = require("./src/read-cases");
 const downloadReports = require("./src/download-reports");
 const addNewCases = require("./src/add-new-cases");
 const logDatabase = require("./src/log-database");
-const unknownCases = require("./src/unknown-cases");
 const program = commander.program;
 
 program.version("archive-1.0.0");
