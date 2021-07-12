@@ -1,10 +1,13 @@
 # Changelog
 
-**./src/import-export/sub/**
+**./src/import-export/validation/cell-arguments/**
 * Deleted files:
-	* data-contents.js
-	* import-help.js
-	* parse-csv.js
-	* row-group.js
-	* row-insert.js
+	* case-archive.js
+	* case-code-syntax.js
+	* case-download.js
+	* determination-items.js
+	* general-items.js
+	* list-item-name.js
+	* ref-num.js
+	* row-object.js
 * Added placeholder file.
