@@ -10,7 +10,6 @@ const readCases = require("./src/read-cases");
 const downloadReports = require("./src/download-reports");
 const addNewCases = require("./src/add-new-cases");
 const logDatabase = require("./src/log-database");
-const importData = require("./src/import-data");
 const unknownCases = require("./src/unknown-cases");
 const program = commander.program;
 
@@ -115,17 +114,6 @@ program
 .action(function()
 {
 	logDatabase.performCommand();
-});
-
-
-// import [folder-path]
-program
-.command("import [folder-path]")
-.description("imports exported .csv files into database. this will completely overwrite any existing data")
-.option("-e --ignore-errors", optDesc.importIgnoreErrors)
-.action(function(folderPath, options)
-{
-	importData.performCommand(folderPath, options);
 });
 
 
