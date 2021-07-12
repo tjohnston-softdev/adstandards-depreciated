@@ -1,9 +1,5 @@
 # Changelog
 
-**./src/import-export/write-export-files.js**
-* Deleted file.
-
----
-
-**./src/export-data.js**
-* This file is now empty.
+**./archive.js**
+* Removed './src/export-data' requirement.
+* Removed 'export' command.

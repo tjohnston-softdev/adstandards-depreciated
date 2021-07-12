@@ -10,7 +10,6 @@ const readCases = require("./src/read-cases");
 const downloadReports = require("./src/download-reports");
 const addNewCases = require("./src/add-new-cases");
 const logDatabase = require("./src/log-database");
-const exportData = require("./src/export-data");
 const importData = require("./src/import-data");
 const unknownCases = require("./src/unknown-cases");
 const program = commander.program;
@@ -116,18 +115,6 @@ program
 .action(function()
 {
 	logDatabase.performCommand();
-});
-
-
-
-// export [folder-path]
-program
-.command("export [folder-path]")
-.description("exports archive database to .csv files")
-.option("-o --overwrite", optDesc.overwrite)
-.action(function(folderPath, options)
-{
-	exportData.performCommand(folderPath, options);
 });
 
 
