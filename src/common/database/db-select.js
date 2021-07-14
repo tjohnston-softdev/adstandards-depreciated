@@ -57,7 +57,7 @@ function selectCaseDocumentLinkRows(connObj, urlDesc, offsetNum, groupSize, sele
 		else
 		{
 			// Prepare and return query results.
-			retrievedRows = dataCaseDocuments.prepareCaseDocumentLinks(selectRes);
+			retrievedRows = prepareCaseDocumentLinkRows(selectRes);
 			return selectCallback(null, retrievedRows);
 		}
 	});
@@ -96,6 +96,31 @@ function selectLatestDeterminationRow(connObj, dateDesc, selectCallback)
 		}
 	});
 	
+}
+
+
+// Parses advertisement case document rows into JSON objects.
+function prepareCaseDocumentLinkRows(rowDataArray)
+{
+	var rowIndex = 0;
+	var currentRow = {};
+	var currentCode = "";
+	var currentLink = "";
+	var currentPrepared = {};
+	
+	var prepRes = [];
+	
+	for (rowIndex = 0; rowIndex < rowDataArray.length; rowIndex = rowIndex + 1)
+	{
+		currentRow = rowDataArray[rowIndex];
+		currentCode = currentRow.caseCode;
+		currentLink = currentRow.documentFileURL;
+		currentPrepared = {"caseName": currentCode, "downloadLink": currentLink};
+		
+		prepRes.push(currentPrepared);
+	}
+	
+	return prepRes;
 }
 
 
