@@ -32,7 +32,7 @@ function enforceDelay(sDelayCallback)
 	setTimeout(function()
 	{
 		return sDelayCallback(null, true);
-	}, 1000);
+	}, 100);
 }
 
 

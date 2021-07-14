@@ -1,12 +1,7 @@
 # Changelog
 
-**./readme.md**
-* Removed: "being the self-regulating agency for advertisement content in Australia"
-* Expanded 'all commands' description.
-	* Before: "for other commands"
-	* After: "to see all available commands"
-
----
-
-**./disclaimer.md**
-* Removed "As this is a personal project [...] any other feedback."
+**./src/web-request/sub/reply-output.js - enforceDelay**
+* Changed delay length from 1000ms to 100ms.
+	* It is still technically there but it has been greatly reduced.
+	* Getting rid of the delay entirely might cause file downloads to be unstable.
+	* Quick tests were successful as expected.
