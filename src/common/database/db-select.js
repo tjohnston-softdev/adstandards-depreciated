@@ -2,8 +2,6 @@
 
 const dbErrorText = require("./errors/db-error-text");
 const selectQueryText = require("./queries/select-query-text");
-const dataCaseDocuments = require("./row-data/data-case-documents");
-
 
 
 // Retrieves the row ID of a given item in a given table.
