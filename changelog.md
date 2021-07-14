@@ -1,9 +1,12 @@
 # Changelog
 
-**./src/common/database/row-data**
-* Deleted folder.
+**./readme.md**
+* Removed: "being the self-regulating agency for advertisement content in Australia"
+* Expanded 'all commands' description.
+	* Before: "for other commands"
+	* After: "to see all available commands"
 
 ---
 
-**./src/common/database/db-select.js**
-* Removed requirement: './row-data/data-case-documents'
+**./disclaimer.md**
+* Removed "As this is a personal project [...] any other feedback."

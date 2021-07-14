@@ -11,7 +11,7 @@ To quote their website:
 
 \-Retrieved 11 January 2021 ([Full text](https://adstandards.com.au/about/ad-standards))
 
-Adstandards, being the self-regulating agency for advertisement content in Australia, enables members of the general public to submit complaints regarding advertisements that can be considered offensive in some way. These complaints are then reviewed by a community panel to assess whether they are justified based on prevailing community values. Reports of these complaints and their outcomes are then [published](https://adstandards.com.au/cases) on their website for public viewing.
+Adstandards enables members of the general public to submit complaints regarding advertisements that can be considered offensive in some way. These complaints are then reviewed by a community panel to assess whether they are justified based on prevailing community values. Reports of these complaints and their outcomes are then [published](https://adstandards.com.au/cases) on their website for public viewing.
 
 ---
 
@@ -31,7 +31,7 @@ Here is a table of the main archive commands in suggested order of execution:
 | download-reports | Downloads known case report .pdf files from adstandards.                    |
 
 
-Run `archive.js` for other commands.
+Run `archive.js` to see all available commands.
 
 ---
 

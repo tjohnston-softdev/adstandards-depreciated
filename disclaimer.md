@@ -14,12 +14,10 @@ The intention of this software project is to download publicly available informa
 
 In accordance with these terms, any use of this software and downloading of Adstandards content must be personal and non-commercial. This is conducted at the user's sole responsibility and the developer does not assume any liability for copyright infringement or any other damages as a result of using this software. The repository for this software only contains the source code and documentation files. It does not store any files downloaded by this program.
 
-As this is a personal project, I am not actively looking for contributions. However, I am open to suggestions, bug reports, or any other feedback.
-
 ---
 
 **Terms Retrieved:** 11 January 2021
 
-**Last Updated:** 28 March 2021
+**Last Updated:** 14 July 2021
 
 
