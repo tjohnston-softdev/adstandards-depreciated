@@ -1,3 +1,4 @@
 # Changelog
 
-Depreciation notice.
+**./readme.md**
+* Past-tense license for 'Legal' section.

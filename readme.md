@@ -48,7 +48,7 @@ Run `archive.js` to see all available commands.
 
 
 ## Legal
-This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).   
+This work was licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).   
 Read the [disclaimer](./disclaimer.md) for more information.
 
 ![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
