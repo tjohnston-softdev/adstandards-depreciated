@@ -1,3 +1,14 @@
+
+# THIS REPOSITORY HAS BEEN DEPRECIATED
+
+As of September 22 2021, I will no longer be actively maintaining this repository. The main reason is that I feel that the solution is too complex for its own good and that it could had been implemented in a simpler fashion. I do have plans to revisit Adstandards web scraping at a later date but I'm not entirely sure when I will get around to it. Once I have an active repository, I will link it here.
+
+---
+---
+---
+---
+---
+
 # Adstandards Archive Backend
 
 This is a Node JS command line application used to scrape and archive advertising complaint case reports from [Adstandards Australia](https://adstandards.com.au). I wrote this program as an exercise in software development, database design, web scraping, and archiving public information.
@@ -41,4 +52,3 @@ This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licens
 Read the [disclaimer](./disclaimer.md) for more information.
 
 ![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
-

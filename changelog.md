@@ -1,3 +1,3 @@
 # Changelog
 
-Archive Release.
+Depreciation notice.
