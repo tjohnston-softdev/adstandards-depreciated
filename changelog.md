@@ -1,4 +1,7 @@
 # Changelog
 
-**./readme.md**
-* Past-tense license for 'Legal' section.
+Renamed repository
+
+**Before:** `adstandards-backend`
+
+**After:** `adstandards-depreciated`
